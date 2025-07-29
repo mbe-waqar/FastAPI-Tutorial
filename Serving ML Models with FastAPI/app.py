@@ -81,3 +81,6 @@ def predict_premium(data: UserInput):
 
     # Make prediction
     model_prediction = model.predict(input_df)[0]
+
+    # Prepare response
+    return JSONResponse(status_code=200, content={'predicted_premium': model_prediction}) 
